@@ -20,7 +20,8 @@ RUN rm /usr/lib/cups/backend/parallel \
 
 VOLUME /etc/cups/ /var/log/cups /var/spool/cups /var/cache/cups
 
-RUN sed -i 's/localhost:631/0.0.0.0:631/g' /etc/cups/cupsd.conf
+#RUN sed -i 's/localhost:631/0.0.0.0:631/g' /etc/cups/cupsd.conf
+COPY cupsd.conf /etc/cups/cupsd.conf
 
 COPY etc-pam.d-cups /etc/pam.d/cups
 
