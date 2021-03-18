@@ -1,4 +1,4 @@
-name: build compass image
+name: build cups image
 
 on:
   workflow_dispatch:
